@@ -7,9 +7,16 @@ This article shows how to modify the "Matter - SoC Sensor over Thread" example p
 
 This article is based on Silicon Labs Gecko SDK version 4.3.2 with Silicon Labs Matter 2.1.1 extensions.
 
-![Silicon Labs EFR32xG24 Explorer Kit Board](./images/xg24-ek2703a.png)
+<div>
+<img src="./images/xg24-ek2703a.png" alt="Silicon Labs EFR32xG24 Explorer Kit Board" width="200" height="170/>
+</div>
 
-![Mikro Elektronika UART 1-WIRE CLICK](./images/uart-1-wire-click-thickbox_default-2.jpg)
+<div>
+<img src="./images/uart-1-wire-click-thickbox_default-2.jpg" alt="Mikro Elektronika UART 1-WIRE CLICK" width="200" height="170/>
+<div>
+
+<div>
+</div>
 
 ### What you will need
 
