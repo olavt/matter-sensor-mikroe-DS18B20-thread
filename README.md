@@ -49,7 +49,7 @@ When asked click on "Replace Matter Occupancy Sensor with Matter Temperature Sen
 
 Select "Temperature Sensor Support" and click "Install".
 
-## Add USART for the Mikro Elektronika UART 1-WIRE CLICK
+## Add EUSUART for the Mikro Elektronika UART 1-WIRE CLICK
 
 Open the .slcp file in your project and select "SOFTWARE COMPONENTS".
 
