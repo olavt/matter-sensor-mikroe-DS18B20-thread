@@ -1,4 +1,4 @@
-# Building a Matter Accessory Device based on Silicon Labs EFR32xG24 Dev Kit Board (BRD2601B)
+# Building a Matter Accessory Device based on Silicon Labs EFR32xG24 Explorer Kit Board (EK2703A) with a Mikro Elektronika UART 1-WIRE CLICK and a Dallas Semiconductor DS18B20 temperature sensor.
 ### Author: [Olav Tollefsen](https://www.linkedin.com/in/olavtollefsen/)
 
 ## Introduction
@@ -49,17 +49,12 @@ When asked click on "Replace Matter Occupancy Sensor with Matter Temperature Sen
 
 Select "Temperature Sensor Support" and click "Install".
 
-## Add support for UART to the project
+## Add USART for the Mikro Elektronika UART 1-WIRE CLICK
 
 Open the .slcp file in your project and select "SOFTWARE COMPONENTS".
 
-Locate "Services->IO Stream->Driver->IO Stream: USART", select it and click "Install"
+Locate "Platform->Driver>UART->UARTDRV EUSART", select it and click "Add New Instances"
 
-![IO Stream: USART](./images/io_stream_usart_install.png)
+Add the suggested instance with the name "mikroe".
 
-In the Create a Component Instance dialog, select the instance name "mikroe" from the "Recommended Instance Names" list and click Done.
-
-![IO Stream: USART](./images/create-uart-instance.png)
-
-Click on the created "mikroe" instance and select 
 
