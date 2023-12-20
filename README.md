@@ -5,7 +5,7 @@
 
 This article shows how to modify the "Matter - SoC Sensor over Thread" example project with support for a 1-Wire Dallas Semiconductor DS18B20 temperature sensor conneected to a Mikro Elektronika UART 1-WIRE CLICK attached to the Silicon Labs EFR32xG24 Explorer Kit Board (EK2703A).
 
-This article is based on Silicon Labs Gecko SDK version 4.3.2 with Silicon Labs Matter 2.1.1 extensions.
+This article is based on Silicon Labs Gecko SDK version 4.3.2 with Silicon Labs Matter 2.2.0.
 
 <img src="./images/xg24-ek2703a.png" alt="Silicon Labs EFR32xG24 Explorer Kit Board" width="200" height="170"/>
 
@@ -19,7 +19,13 @@ This article is based on Silicon Labs Gecko SDK version 4.3.2 with Silicon Labs 
 - Mikro Elektronika UART 1-WIRE CLICK
 - Dallas Semiconductor DS18B20 temperature sensor
 
-This article assumes that you have already installed Simplicity Studio V5 and the Gecko SDK 4.3.2
+This article assumes that you have already installed Simplicity Studio V5 and the Gecko SDK 4.4.0
+
+## Mount the Mikro Elektronika UART 1-WIRE CLICK
+
+When mounting the Mikro Elektronika UART 1-WIRE CLICK on the Silicon Labs EFR32xG24 Explorer Kit Board make sure it's oriented correctly according to this illustration:
+
+![mikroBUS Add-on Board Orientation](./images/mikrobus-board-orientation.png)
 
 ## Create the initial project based on the "Matter - SoC Sensor over Thread" example project
 
@@ -27,7 +33,7 @@ Start by creating a new project in Simplicity Studio V5 by selecting the "Matter
 
 ![Matter - SoC Sensor over Thread Example Project](./images/matter-sensor-thread-example-project.png)
 
-This is a good starting point as it already implements a fully functional Matter over Thread device. Unfortunately it only supports some simulated sensors and not the actual sensors found on the develkopment kit board.
+This is a good starting point as it already implements a fully functional Matter over Thread device.
 
 ## Change the default sensor type
 
@@ -37,7 +43,7 @@ respective sensor component to enable it. One sensor component should be enabled
 
 Open the .slcp file in your project and select "SOFTWARE COMPONENTS".
 
-Navigate to "Silicon Labs Matter v2.1.1->Platform->Sensors:
+Navigate to "Silicon Labs Matter v2.2.0->Platform->Sensors:
 
 ![Sensor Components](./images/platform-sensor-components.png)
 
@@ -49,12 +55,20 @@ When asked click on "Replace Matter Occupancy Sensor with Matter Temperature Sen
 
 Select "Temperature Sensor Support" and click "Install".
 
-## Add EUSUART for the Mikro Elektronika UART 1-WIRE CLICK
+## Add USUART support for the Mikro Elektronika UART 1-WIRE CLICK
 
 Open the .slcp file in your project and select "SOFTWARE COMPONENTS".
 
-Locate "Platform->Driver>UART->UARTDRV EUSART", select it and click "Add New Instances"
+Locate "Services->IO Stream->Driver->IO Stream: USART", select it and click "Install"
 
-Add the suggested instance with the name "mikroe".
+![IO Stream: USART](./images/io_stream_usart_install.png)
 
+Select the name "mikroe" and click Done.
 
+![Instance "mikroe"](./images/create-uart-instance.png)
+
+Select the "mikroe" instance and click "Configure"
+
+![Instance "mikroe"](./images/mikroe-instance-configure.png)
+
+Change the Baud Rate to 9600 and the CTS and RTS to None.
