@@ -72,3 +72,9 @@ Select the "mikroe" instance and click "Configure"
 ![Instance "mikroe"](./images/mikroe-instance-configure.png)
 
 Change the Baud Rate to 9600 and the CTS and RTS to None.
+
+## Turn off C++ "No RTTI" option
+
+In order to use some C++ language features (like dynamic_cast) you may need to turn off the "No RTTI" option.
+
+![Instance "mikroe"](./images/no-rtti.png)
