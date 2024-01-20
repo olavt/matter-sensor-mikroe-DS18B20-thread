@@ -78,3 +78,32 @@ Change the Baud Rate to 9600 and the CTS and RTS to None.
 In order to use some C++ language features (like dynamic_cast) you may need to turn off the "No RTTI" option.
 
 ![Instance "mikroe"](./images/no-rtti.png)
+
+## Viewing debug logs
+
+You can view the debug log statements using "J-Link RTT Viewer". You can download J-Link RTT Viewer, which is included in the "J-Link Software and Documentation pack" here:
+
+https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack
+
+### Matter Core Components Settings
+
+You can check the settings for the debug outputs under "Matter Core Components" under "Software Components" in your project.
+
+![Matter Core Components Settings](./images/matter-core-components-settings.png)
+
+### Running J-Link RTT Viewer
+
+Make sure your device is  connected to an USB port and the software on it is running. Start the J-Link RTT Viewer and select "Connect" from the File menu.
+
+### Select Target Device
+
+Select your target device in the connect dialog:
+
+![J-Link Select Target Device](./images/j-link-select-target-device.png)
+
+
+When the dialog for selecting the emulator to connect to, select entry #1 like shown below.
+
+![J-Link Select Emulator](./images/j-link-select-emulator.png)
+
+The debug log messages should now appear in the terminal windowws of the J-Link RTT Viewer.
