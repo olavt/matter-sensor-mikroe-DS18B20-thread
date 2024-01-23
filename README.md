@@ -101,8 +101,7 @@ Select your target device in the connect dialog:
 
 ![J-Link Select Target Device](./images/j-link-select-target-device.png)
 
-
-When the dialog for selecting the emulator to connect to, select entry #1 like shown below.
+If you have multiple Dev Kits attached, you may get this dialog and then you need to select the one you want to get the log messages from. Knowing which may not be obvious, so you may need to try and see which entry that is corresponding to which device. 
 
 ![J-Link Select Emulator](./images/j-link-select-emulator.png)
 
