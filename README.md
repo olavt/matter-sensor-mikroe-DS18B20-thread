@@ -35,6 +35,10 @@ Start by creating a new project in Simplicity Studio V5 by selecting the "Matter
 
 This is a good starting point as it already implements a fully functional Matter over Thread device.
 
+## Support for newer C++ versions
+
+By default, the project will support "-std=gnu++17". In the default project there are two settings related to the C++ language version. The first setting is the "C++ Language Dialect" setting under "Dialect" (under "GNU ARM C++ Compiler" settings). The other setting is under "Other flags" (under "Miscellanous"). There you will find a flag "-std=gnu++17". It looks like this flag setting takes precedence over the  "C++ Language Dialect" setting. I think it's best to remove the line with the flag under "Other flags" and rather change the "C++ Language Dialect" setting.
+
 ## Change the default sensor type
 
 When you create the sensor project it defaults to Occupancy Sensor. To switch between
