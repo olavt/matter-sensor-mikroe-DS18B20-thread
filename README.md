@@ -73,6 +73,8 @@ Select the "mikroe" instance and click "Configure"
 
 Change the Baud Rate to 9600 and the CTS and RTS to None.
 
+Note! Keep an eye on the "Receive buffer size" setting. If you are expecting longer messages to arrive, you need to increase this setting. Otherwise, you may lose input bytes. 
+
 ## Turn off C++ "No RTTI" option
 
 In order to use some C++ language features (like dynamic_cast) you may need to turn off the "No RTTI" option.
