@@ -77,7 +77,13 @@ Select the "mikroe" instance and click "Configure"
 
 Change the Baud Rate to 9600 and the CTS and RTS to None.
 
-Note! Keep an eye on the "Receive buffer size" setting. If you are expecting longer messages to arrive, you need to increase this setting. Otherwise, you may lose input bytes. 
+Note! Keep an eye on the "Receive buffer size" setting. If you are expecting longer messages to arrive, you need to increase this setting. Otherwise, you may lose input bytes.
+
+## Enable the "printf float" option
+
+If you want to be able to print float values, you need to enable the "printf float" option as shown below:
+
+![Enable "printf float"](./images/enable-printf-float.png)
 
 ## Turn off C++ "No RTTI" option
 
