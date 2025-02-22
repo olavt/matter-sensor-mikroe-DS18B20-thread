@@ -93,15 +93,29 @@ In order to use some C++ language features (like dynamic_cast) you may need to t
 
 ## Viewing debug logs
 
-You can view the debug log statements using "J-Link RTT Viewer". You can download J-Link RTT Viewer, which is included in the "J-Link Software and Documentation pack" here:
+The logging destination is controled by components found under "Silicon Labs Matter v2.5.1->Platform->Utils":
 
-https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack
+![Matter Logging Destination](./images/logging-destination.png)
 
 ### Matter Core Components Settings
 
 You can check the settings for the debug outputs under "Matter Core Components" under "Software Components" in your project.
 
 ![Matter Core Components Settings](./images/matter-core-components-settings.png)
+
+### View UART logging in the Simplicity Studio Debugger
+
+Find your connected device in the Debug Adapters view, select it, right click and select "Launch Console...":
+
+![Matter Core Components Settings](./images/launch-console.png)
+
+Select the "Serial 1" tab, click in the input field at the botton to connect to the UART. You should now see log messages in that window.
+
+### View UART logging using the J-Link RTT Viewer
+
+You can view the debug log statements using "J-Link RTT Viewer". You can download J-Link RTT Viewer, which is included in the "J-Link Software and Documentation pack" here:
+
+https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack
 
 ### Running J-Link RTT Viewer
 
@@ -117,4 +131,4 @@ If you have multiple Dev Kits attached, you may get this dialog and then you nee
 
 ![J-Link Select Emulator](./images/j-link-select-emulator.png)
 
-The debug log messages should now appear in the terminal windowws of the J-Link RTT Viewer.
+The debug log messages should now appear in the terminal windows of the J-Link RTT Viewer.
